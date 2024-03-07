@@ -33,7 +33,6 @@ public class EmailService {
             helper.setSubject(subject);
             helper.setText(htmlBody, true);
         };
-
         mailSender.send(messagePreparator);
     }
 }
