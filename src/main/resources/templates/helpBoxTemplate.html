@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Yardım Kutusu Mesajı</title>
+    <style type="text/css">
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #101010;
+            color: white;
+            padding: 20px 40px;
+            text-align: center;
+        }
+        .header img {
+            height: 80px;
+        }
+        .content {
+            padding: 40px;
+            background-color: #ffffff;
+            text-align: left;
+            line-height: 1.6;
+        }
+        .user-message {
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .contact-info {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .footer {
+            background-color: #e1e1e1;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img src="https://i.ibb.co/80d90vN/Boran-Hoca-C-izim-O-devi-1.jpg" alt="Logo">
+    </div>
+    <div class="content">
+        <!-- Kullanıcının Mesajı -->
+        <div class="user-message">
+            <p><strong th:text="${username}">Kullanıcı Adı</strong> tarafından gönderilen mesaj:</p>
+            <p th:text="${emailContent}">Bu bölümde kullanıcının yardım kutusu mesajı yer alacak.</p>
+        </div>
+
+        <!-- İletişim Bilgisi -->
+        <div class="contact-info">
+            <p>Eğer <strong th:text="${username}"></strong> isimli kullanıcıyla iletişim kurmak isterseniz, lütfen aşağıdaki e-posta adresini kullanınız:</p>
+            <p><strong th:text="${email}"></strong></p>
+        </div>
+
+        <!-- Şirket Bilgisi -->
+        <p style="color: #777; font-size: 14px;">Bu mesaj, <em style="color: #0033FF;">AfetAnkaNET</em> Yardım Kutusu aracılığıyla gönderilmiştir.</p>
+    </div>
+    <div class="footer">
+        <p>© 2024 AfetAnkaNET. Her hakkı saklıdır.</p>
+    </div>
+</div>
+</body>
+</html>
